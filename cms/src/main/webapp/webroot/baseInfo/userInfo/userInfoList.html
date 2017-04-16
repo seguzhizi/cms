@@ -157,6 +157,7 @@
 					url: "../../../user/getUserListByPage.do",
 					data: "name=John&location=Boston",
 					success: function(msg){
+							console.log(msg);
 							alert( "receive data:" + msg );
 						}
 					});

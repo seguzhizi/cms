@@ -6,15 +6,20 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.alibaba.fastjson.JSONObject;
+import com.paic.cms.userinfo.dto.UserInfo;
 import com.paic.cms.userinfo.service.IUserInfoService;
 
 @Controller
 @RequestMapping("/user")
 public class UserInfoController {
+	
+	Logger logger = Logger.getRootLogger().getLogger(getClass());
 	
 	@Autowired
 	private IUserInfoService userInfoService;
@@ -23,14 +28,10 @@ public class UserInfoController {
 	public void index2(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		PrintWriter writer = response.getWriter();
 		String str = "ssss111222444422a---";
-		userInfoService.getUserListByPage();
-		System.out.println(str);
-
-		System.out.println("this is cms");
-
-		System.out.println("this is cms222");
-		
-		writer.write(str);
+		UserInfo userInfo = userInfoService.getUserListByPage();
+		String jsonUser = JSONObject.toJSONString(userInfo);
+		logger.info(jsonUser);
+		writer.write(jsonUser);
 		writer.flush();
 		writer.close();
 	}

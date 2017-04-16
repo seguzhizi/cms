@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/base")
+//@RequestMapping("/base")
 public class BaseController {
 
 	@RequestMapping("/login2.do")

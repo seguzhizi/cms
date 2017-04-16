@@ -16,8 +16,7 @@ public class UserInfoServiceImpl implements IUserInfoService {
 	@Override
 	public UserInfo getUserListByPage() {
 		UserInfo userInfo = userInfoDao.getUserListByPage();
-		System.out.println(userInfo);
 		System.out.println("userInfoServiceImpl is invoked");
-		return null;
+		return userInfo;
 	}
 }
