@@ -6,6 +6,14 @@ var navs = [
     		"title": "人员管理",
     		"icon": "&#xe641;",
     		"href": "baseInfo/userInfo/userInfoList.html"
+    	},{
+    		"title": "角色管理",
+    		"icon": "&#xe641;",
+    		"href": "baseInfo/userInfo/userInfoList.html"
+    	},{
+    		"title": "菜单管理",
+    		"icon": "&#xe641;",
+    		"href": "baseInfo/userInfo/userInfoList.html"
     	}]
     },
     {
