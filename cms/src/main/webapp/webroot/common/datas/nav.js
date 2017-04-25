@@ -9,11 +9,11 @@ var navs = [
     	},{
     		"title": "角色管理",
     		"icon": "&#xe641;",
-    		"href": "baseInfo/userInfo/userInfoList.html"
+    		"href": "baseInfo/userInfo/roleInfoList.html"
     	},{
     		"title": "菜单管理",
     		"icon": "&#xe641;",
-    		"href": "baseInfo/userInfo/userInfoList.html"
+    		"href": "baseInfo/userInfo/menuInfoList.html"
     	}]
     },
     {

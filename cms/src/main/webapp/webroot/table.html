@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Table</title>
-		<link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="css/global.css" media="all">
-		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/table.css" />
+		<link rel="stylesheet" href="common/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="common/css/global.css" media="all">
+		<link rel="stylesheet" href="common/plugins/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="common/css/table.css" />
 	</head>
 
 	<body>
@@ -416,10 +416,10 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="plugins/layui/layui.js"></script>
+		<script type="text/javascript" src="common/plugins/layui/layui.js"></script>
 		<script>
 			layui.config({
-				base: 'plugins/layui/modules/'
+				base: 'common/plugins/layui/modules/'
 			});
 
 			layui.use(['icheck', 'laypage','layer'], function() {
@@ -451,7 +451,7 @@
 				});
 
 				$('#add').on('click', function() {
-					$.get('temp/edit-form.html', null, function(form) {
+					$.get('common/temp/edit-form.html', null, function(form) {
 						layer.open({
 							type: 1,
 							title: '添加表单',
